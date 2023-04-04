@@ -1,0 +1,22 @@
+<!-- signup.component.html -->
+
+<mat-card class="signup-card">
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        <mat-form-field class="full-width">
+          <input matInput [(ngModel)]="fullName" name="fullName" placeholder="Full Name" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput [(ngModel)]="email" name="email" placeholder="Email" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="full-width" type="submit">Sign Up</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
